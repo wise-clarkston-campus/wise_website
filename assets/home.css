@@ -1,0 +1,66 @@
+/* This is the CSS for the homepage */
+body{
+    background:#CFACE3; /*purplish background */
+}
+#logo{
+padding-bottom:20px;
+}
+/*Media Queries*/
+/*@media screen and()*/
+.description{
+color:white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.title{
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#title{
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#description{
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#about{
+padding-top:10px;
+}
+
+
+/*MEDIA Queries */
+@media screen and (min-width:1190px){
+    #description{
+        padding:0 30px 20px 70px;
+    }
+    .carousel-caption{
+        margin:60px;      
+}
+}
+ @media screen and (max-width:360px){
+        #about{
+        padding:0;
+        }
+}
+@media screen and (max-width:1000px){
+    .carousel-indicators{
+        visibility:hidden;  
+    }    
+.carousel-control-prev{
+    padding-bottom:280px;
+        }
+.carousel-control-next{
+    padding-bottom:280px;
+    margin:0;
+        }
+    div[style]{
+        height:250px !important;
+    }
+    #about{
+    padding-top:2px;
+    }
+}
+   
+    
+    
+    

@@ -1,0 +1,47 @@
+<DOCTYPE html>
+
+  <header>
+    <% include partials/nav.ejs %>
+    <script src="/application.js"></script>
+   
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  </header>
+   
+   <div class="container">
+<h1>
+   Sign up to join our Chat Forum
+   </h1>
+   <form  method="POST" action="/Signup">
+     <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="name" name = "name" id = "name" class="form-control" placeholder="Full Name" style="width: 70%">
+    </div>
+     <div class="form-group">
+      <label for="major">Major</label>
+      <input type="major" name = "major"  id = "major" class="form-control"  placeholder="Major" style="width: 70%">
+    </div>
+     <div class="form-group">
+      <label for="campus">Campus</label>
+      <input type="location" name = "campus"  id = "campus" class="form-control"  placeholder="Campus" style="width: 70%">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control input-sm" id="exampleInputEmail1" name = "email" aria-describedby="emailHelp"  id = "email" placeholder="Enter email" style="width: 70%" >
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name = "password"  id = "password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 70%">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Re-enter Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name = "repassword" id="repassword" placeholder="Password" style="width: 70%">
+    </div>
+    <button type="submit" value="submit" class="btn btn-primary">sign in</button>
+  </form>
+   
+  <p> <a target ="_blank" href="Signin.html">Sign-in</p>
+</div>
+
+   
+     

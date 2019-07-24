@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <% include partials/nav.ejs %>
+        <!--The home.ejs does not contain menu-->
+        <!--<% include partials/nav.ejs %> -->
         <title>Women in STEM Experience |</title>
         <!-- Viewport meta tag-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -13,7 +14,19 @@
     </head>
 
         <header>
-     <!--Menu is located in the nav.ejs file -->
+            <!--buttons-->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "Events.html">
+    Upcoming Events</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "Forum.html">Member's Forum</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "Signin.html">
+    Sign-in</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "Signup.html">
+    Create Account</a></li>
+  </ol>
+</nav>
         <header/>
 
     <body class="container">
@@ -28,7 +41,7 @@
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active"> 
+      <div class="carousel-item active"> <!-- Need to change size of this-->
         <img src="../assets/fieldtrip.jpeg" class="d-block w-100"> 
         <div class="carousel-caption d-block">
           <h5 class="title">First slide label</h5>
@@ -66,8 +79,8 @@
              into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
              passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
+      </div>
   </div>       
-                <!-- Created a span class to edit the spacing for this sentence-->
                 <span class="member"> <Strong> Be a WISE member <a target ="_blank" href="https://pin.gsu.edu/actioncenter/organization/clarkston-wise/roster"> here </Strong></span>
  
     </body>

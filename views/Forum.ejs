@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <script src="/assets/addedText.js"></script> 
-    <head>
-      <script src="/application.js"></script> 
-    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type = "text/css">
+                body{background-image: url("/assets/b1.jpg")! important;}
+            </style>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page"><a href = "home">
+   Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "Events">
+    Upcoming Events</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "Forum-success">Member's Forum</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href = "/<%=data[0].name%>/logout">
+   Log Out</a></li>    
+  </ol>
+</nav>
+
+<head>
+      <script src="/assets/addedText.js"></script> 
+      <script src="jquery-3.4.1.min.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script typr="text/javascript">
+         $(document).ready(()=>{
+           $('#post').click(()=>{
+              $.ajax({
+                url: 'forum/',
+                type:'GET',
+                dataType:'String',
+                success:(data)=>{
+                  console.log('ajax success');
+                }
+              });
+           });
+      });
+      </script>
   
-          <% include partials/nav.ejs %>
-
         <title>Women in STEM Experience |</title>
         <meta name = "description" content = "This is the description">
         <!-- bootstrap link -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-    </head>
-      <script src="/assets/addedText.js"></script> 
-      <body>
-    <div class="container">
-  <h1>Member's Forum</h1>
- <div class="alert alert-primary" role="alert">
-  A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-secondary" role="alert">
-  A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-success" role="alert">
-  A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-danger" role="alert">
-  A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-warning" role="alert">
-  A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-info" role="alert">
-  A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-light" role="alert">
-  A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
-<div class="alert alert-dark" role="alert">
-  A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <form class= "alert alert-dark" method="post">
-    <input type="text" name="input"  class="form-control"  placeholder="Text.." >
-    <button type='submit'>Add Item</button>
-  </form>
-  <ul>
-    <% for(var i=0; i < todos.length; i++){%>
-      <li><div class="alert alert-secondary"role="alert"><%=todos[i].item%></div></li>
-   <%}%>
-  </ul>
+       
+   </head>
+
+      <body>
+        
+        <h1>Member's Forum</h1>
+
+    
+        <form class= "alert alert-dark" method="post">
+          <input type="text" name="input"  class="form-control"  placeholder="Text.." >
+          <button id = 'post' type='submit'>Post</button>
+        </form>
+      
+        <% for(var i=data.length-1; i > 0; i--){%>
+          <div class="alert alert-primary"role="alert"><b><%=data[i].name%></b> <%=data[i].message%></div>
+       <%}%>
+ 
 </body>
     </html>
